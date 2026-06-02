@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>怪獣ゲインズ KAIJU GAINS | Cyber-Suplementación Premium</title>
+    <style>
+        /* --- RESET & VARIABLES CYBERPUNK --- */
+        :root {
+            --neon-cyan: #00f3ff;
+            --neon-pink: #ff0055;
+            --neon-yellow: #ffe600;
+            --dark-bg: #0a0a12;
+            --card-bg: rgba(16, 16, 28, 0.7);
+            --cyber-font: 'Courier New', Courier, monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #ffffff;
+            overflow-x: hidden;
+            background-image: 
+                linear-gradient(rgba(0, 243, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 243, 255, 0.03) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        /* --- HEADER & NAV --- */
+        header {
+            border-bottom: 2px solid var(--neon-cyan);
+            box-shadow: 0 0 15px var(--neon-cyan);
+            background: rgba(10, 10, 18, 0.9);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(5px);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            font-family: var(--cyber-font);
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #fff;
+            text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan);
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: var(--neon-pink);
+            text-shadow: 0 0 10px var(--neon-pink);
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: 0.3s;
+            border: 1px solid transparent;
+            padding: 5px 10px;
+        }
+
+        nav a:hover {
+            color: var(--neon-cyan);
+            border: 1px solid var(--neon-cyan);
+            box-shadow: 0 0 10px var(--neon-cyan);
+            background: rgba(0, 243, 255, 0.1);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+
+        .glitch-title {
+            font-size: 4.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 1;
+            margin-bottom: 10px;
+            color: #fff;
+            text-shadow: 3px 3px 0px var(--neon-pink), -3px -3px 0px var(--neon-cyan);
+            font-family: var(--cyber-font);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--neon-yellow);
+            text-shadow: 0 0 5px rgba(255, 230, 0, 0.5);
+            margin-bottom: 30px;
+            letter-spacing: 4px;
+        }
+
+        /* --- SECCIÓN PRODUCTOS (SUPLEMENTOS TECH) --- */
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin: 60px 0 30px;
+            font-family: var(--cyber-font);
+            color: #fff;
+            text-shadow: 0 0 10px var(--neon-pink);
+            text-transform: uppercase;
+        }
+
+        .grid-productos {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--neon-cyan);
+            border-radius: 4px;
+            padding: 25px;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s;
+            box-shadow: 0 0 10px rgba(0, 243, 255, 0.1);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px var(--neon-cyan);
+            border-color: #fff;
+        }
+
+        .card::before {
+            content: "怪獣";
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.03);
+            font-weight: 900;
+        }
+
+        .card h3 {
+            color: var(--neon-cyan);
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            font-family: var(--cyber-font);
+        }
+
+        .card .tag {
+            display: inline-block;
+            background: var(--neon-pink);
+            color: #fff;
+            padding: 2px 8px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            border-radius: 3px;
+            margin-bottom: 15px;
+            text-shadow: 0 0 5px #fff;
+        }
+
+        .card p {
+            color: #ccc;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* --- SUCURSAL BANANNERITO --- */
+        .sucursal-box {
+            max-width: 800px;
+            margin: 50px auto;
+            background: linear-gradient(135deg, rgba(255, 0, 85, 0.2), rgba(16, 16, 28, 0.9));
+            border: 2px dashed var(--neon-pink);
+            padding: 40px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(255, 0, 85, 0.3);
+        }
+
+        .sucursal-box h2 {
+            color: var(--neon-yellow);
+            text-shadow: 0 0 10px var(--neon-yellow);
+            font-family: var(--cyber-font);
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        /* --- SECCIÓN CONTACTO & UBICACIÓN --- */
+        .info-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            padding: 40px 20px;
+        }
+
+        @media (max-width: 768px) {
+            .info-wrapper { grid-template-columns: 1fr; }
+            .glitch-title { font-size: 2.3rem; }
+        }
+
+        .form-cyber {
+            background: var(--card-bg);
+            border: 1px solid var(--neon-pink);
+            padding: 30px;
+            border-radius: 4px;
+            box-shadow: 0 0 15px rgba(255, 0, 85, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--neon-cyan);
+            margin-bottom: 8px;
+            font-family: var(--cyber-font);
+            font-size: 0.9rem;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            background: #000;
+            border: 1px solid #333;
+            color: #fff;
+            padding: 12px;
+            border-radius: 3px;
+            transition: 0.3s;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--neon-cyan);
+            box-shadow: 0 0 10px var(--neon-cyan);
+        }
+
+        .btn-cyber {
+            width: 100%;
+            background: transparent;
+            border: 1px solid var(--neon-cyan);
+            color: var(--neon-cyan);
+            padding: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-family: var(--cyber-font);
+            letter-spacing: 2px;
+            transition: 0.3s;
+        }
+
+        .btn-cyber:hover {
+            background: var(--neon-cyan);
+            color: #000;
+            box-shadow: 0 0 20px var(--neon-cyan);
+        }
+
+        /* Mapa Simulado Futurista */
+        .map-container {
+            background: var(--card-bg);
+            border: 1px solid var(--neon-cyan);
+            padding: 30px;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .cyber-map {
+            width: 100%;
+            height: 250px;
+            background: #05050a;
+            border: 1px dashed var(--neon-cyan);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .map-grid {
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: -50%;
+            left: -50%;
+            background-image: radial-gradient(circle, rgba(0,243,255,0.15) 1px, transparent 1px);
+            background-size: 20px 20px;
+            transform: rotate(15deg);
+        }
+
+        .ping {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 12px;
+            height: 12px;
+            background: var(--neon-pink);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--neon-pink);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+            100% { transform: translate(-50%, -50%) scale(4); opacity: 0; }
+        }
+
+        .map-text {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .map-text span {
+            color: var(--neon-yellow);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+            border-top: 1px solid #222;
+            font-size: 0.8rem;
+            color: #666;
+            font-family: var(--cyber-font);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">怪獣ゲインズ <span>KAIJU_GAINS</span></div>
+            <nav>
+                <a href="#productos">Catálogo</a>
+                <a href="#sucursal">Banannerito</a>
+                <a href="#contacto">Contacto</a>
+                <a href="#ubicacion">Ubicación</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1 class="glitch-title">KAIJU GAINS</h1>
+        <p>DISTRIBUIDORA DE SUPLEMENTOS DE ÉLITE // NEO-TOKYO 2026</p>
+        <button class="btn-cyber" style="width: auto; padding: 15px 40px;" onclick="conectarTerminal()">SISTEMA INICIADO</button>
+    </section>
+
+    <section id="productos">
+        <h2 class="section-title">NÚCLEOS DE ENERGÍA // 製品</h2>
+        <div class="grid-productos">
+            <div class="card">
+                <div class="tag">WHEY ISOLATE</div>
+                <h3>Kaiju Hydro-Protein</h3>
+                <p>Aislado de suero de absorción ultra-rápida. Cero carbohidratos, cero grasa. Diseñado para la reconstrucción de fibras musculares al nivel de un titán.</p>
+            </div>
+            <div class="card">
+                <div class="tag">ATOMIC POWER</div>
+                <h3>Creatina Monohidrato Pro</h3>
+                <p>Micronizada a nivel molecular para máxima solubilidad. Incrementa el ATP celular para una fuerza bruta e inagotable en cada serie.</p>
+            </div>
+            <div class="card">
+                <div class="tag">CYBER-SURGE</div>
+                <h3>Pre-Workout Volcan-X</h3>
+                <p>Combinación extrema de cafeína anhidra, beta-alanina y citrulina. Enfoque cognitivo hiper-mejorado y bombeo vascular masivo.</p>
+            </div>
+            <div class="card">
+                <div class="tag">BIO-RESTORE</div>
+                <h3>Magnesio + Omega 3 Premium</h3>
+                <p>Suplementación esencial para el bio-hacking del cuerpo. Recuperación del sistema nervioso central y blindaje cardiovascular profundo.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="sucursal" style="padding: 20px;">
+        <div class="sucursal-box">
+            <h2>バナネリート // BANANNERITO DELIVERY</h2>
+            <p style="color: #fff; max-width: 600px; margin: 0 auto 20px; line-height: 1.6;">
+                Nuestra red logística oficial de asalto rápido. Banannerito Delivery se encarga de transportar tus cargas de proteína y creatina de forma inmediata. Cobertura total directa a tu gimnasio o zona de entrenamiento.
+            </p>
+            <div class="tag" style="background-color: var(--neon-yellow); color: #000; font-size: 0.9rem;">DESPACHO EN TIEMPO RÉCORD</div>
+        </div>
+    </section>
+
+    <div class="info-wrapper">
+        
+        <section id="contacto" class="form-cyber">
+            <h2 class="section-title" style="margin: 0 0 20px 0; font-size: 1.8rem; text-align: left;">Canal de Pedidos</h2>
+            <form id="cyberForm">
+                <div class="form-group">
+                    <label for="nombre">> Identificador de Atleta (Nombre)</label>
+                    <input type="text" id="nombre" required placeholder="Ej. Cyber_Gains_X">
+                </div>
+                <div class="form-group">
+                    <label for="negocio">> Punto de Despliegue (Dirección / Gym)</label>
+                    <input type="text" id="negocio" required placeholder="Ej. Distrito Central / Olympus Gym">
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">> Carga Requerida (Detalle de tu Suplementación)</label>
+                    <textarea id="mensaje" rows="4" required placeholder="Ej: 1 Proteína Isolatada, 2 Creatinas..."></textarea>
+                </div>
+                <button type="submit" class="btn-cyber">Enviar Orden a Banannerito</button>
+            </form>
+        </section>
+
+        <section id="ubicacion" class="map-container">
+            <div>
+                <h2 class="section-title" style="margin: 0 0 20px 0; font-size: 1.8rem; text-align: left;">Coordenadas del Búnker</h2>
+                <div class="cyber-map">
+                    <div class="map-grid"></div>
+                    <div class="ping"></div>
+                </div>
+            </div>
+            <div class="map-text">
+                <p><strong>Laboratorio Central:</strong> Sector Tecnológico K-03, Avenida Neón.</p>
+                <p><strong>Despachos Banannerito:</strong> Hangar de Drones 12, Zona Comercial Este.</p>
+                <p><span>// ENLACE:</span> Entregas protegidas con rastreo satelital en tiempo real.</p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        &copy; 2026 KAIJU GAINS NUTRITION CO. - BANANNERITO NETWORK
+    </footer>
+
+    <script>
+        function conectarTerminal() {
+            alert("🦖 [KAIJU GAINS] -> Conexión exitosa. Base de datos de fuerza cargada al 100%. ¡A mutar ese físico, bro!");
+        }
+
+        document.getElementById('cyberForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const usuario = document.getElementById('nombre').value;
+            
+            alert(`⚡ ORDEN ENCRIPTADA Y ENVIADA ⚡\n\nAtleta: ${usuario}\n\nBanannerito Delivery ha recibido tus coordenadas y está preparando la carga de poder. ¡Mantente atento al radar!`);
+            
+            this.reset();
+        });
+
+        // Loop de escaneo de radar del mapa
+        setInterval(() => {
+            const ping = document.querySelector('.ping');
+            if(ping) {
+                ping.style.backgroundColor = ping.style.backgroundColor === 'rgb(0, 243, 255)' ? 'var(--neon-pink)' : 'var(--neon-cyan)';
+                ping.style.boxShadow = ping.style.backgroundColor === 'var(--neon-pink)' ? '0 0 15px var(--neon-pink)' : '0 0 15px var(--neon-cyan)';
+            }
+        }, 2000);
+    </script>
+</body>
+</html>
